@@ -1,0 +1,327 @@
+<!--  <div class="container">
+    <h2>Printing Application</h2>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="form">
+        <div class="form-group">
+          <label for="">Product Code</label>
+          <input [(ngModel)]="ProductCode" type="text" class="form-control">
+        </div> -->
+        <!-- <div class="form-group">
+          <label for="">Product Name</label>
+          <input [(ngModel)]="ProductName" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="">Tare Weight</label>
+          <input [(ngModel)]="TareWeight" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Gross Weight</label>
+            <input [(ngModel)]="GrossWeight" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Net Weight</label>
+            <input [(ngModel)]="NetWeight" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">Total Pack</label>
+            <input [(ngModel)]="TotalPack" type="text" class="form-control">
+          </div> -->
+           
+          <!-- <div class="form-group"> -->
+            <!-- <label for="">Type</label> -->
+            <!-- <mat-form-field>
+              <mat-label>Type</mat-label> -->
+            <!-- <input [(ngModel)]="Type" type="text" class="form-control"> -->
+            <!-- <mat-select>
+              <mat-option *ngFor="let Type of types" [value]="Type.value">
+                {{Type.viewValue}}
+              </mat-option>
+            </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <label for="">Material Type</label>
+            <input [(ngModel)]="MaterialType" type="text" class="form-control">
+          </div>
+        <div class="form-group">
+           -->
+          <!-- <button (click)="onPrint()" class="btn" style="margin-left: 10px">Print</button>
+          <button (click)="onClear()" class="btn" style="margin-left: 10px">Clear</button>
+         
+        </div>
+      </div>
+    </div>
+  
+  </div> -->
+<mat-card>
+  <div class="example-container">
+    <h2>Printing Module</h2>
+    <table style="width: 100%;">
+     <tr>
+       <td>
+        <div class="col-md-12">
+          <div class="form">
+            <div class="form-group">
+              <label for="">Product Code</label>
+              <input [(ngModel)]="ProductCode" type="text" class="form-control">
+            </div>
+          </div>
+          </div>
+       </td>
+       <td>
+        <input type="checkbox" [(ngModel)]="checkbox">
+       </td>
+     </tr>
+     <tr>
+       <td>
+        <div class="col-md-12">
+          <div class="form">
+            <div class="form-group">
+              <label for="">Product Name</label>
+              <input [(ngModel)]="ProductName" type="text" class="form-control">
+            </div>
+          </div>
+          </div>
+       </td>
+       <td>
+        <input type="checkbox" [(ngModel)]="checkbox">
+       </td>
+     </tr>
+     <tr>
+      <td>
+       <div class="col-md-12">
+         <div class="form">
+           <div class="form-group">
+             <label for="">Material Type</label>
+             <!-- <input [(ngModel)]="Type" type="text" class="form-control" > -->
+               <mat-select class="form-control">
+                 <mat-option *ngFor="let Material of materials" [value]="Material.value" class="form-control">
+                   {{Material.viewValue}}
+                 </mat-option>
+               </mat-select>
+           </div>
+         </div>
+         </div>
+      </td>
+      <td>
+       <input type="checkbox" [(ngModel)]="checkbox">
+      </td>
+    </tr>
+    <tr>
+      <td>
+       <div class="col-md-12">
+         <div class="form">
+           <div class="form-group">
+             <label for="">Batch Code</label>
+             <input [(ngModel)]="BatchCode" type="text" class="form-control">
+           </div>
+         </div>
+         </div>
+      </td>
+      <td>
+       <input type="checkbox" [(ngModel)]="checkbox">
+      </td>
+      </tr>
+     <tr>
+       <td>
+        <div class="col-md-12">
+          <div class="form">
+            <div class="form-group">
+              <label for="">Gross Weight</label>
+              <input [(ngModel)]="GrossWeight" type="text" class="form-control">
+            </div>
+          </div>
+          </div>
+       </td>
+       <td>
+        <input type="checkbox" [(ngModel)]="checkbox">
+       </td>
+     </tr>
+     <tr>
+       <td>
+        <div class="col-md-12">
+          <div class="form">
+            <div class="form-group">
+              <label for="">Net Weight</label>
+              <input [(ngModel)]="NetWeight" type="text" class="form-control">
+            </div>
+          </div>
+          </div>
+       </td>
+       <td>
+        <input type="checkbox" [(ngModel)]="checkbox">
+       </td>
+     </tr>
+    
+      <tr>
+       <td>
+        <div class="col-md-12">
+          <div class="form">
+            <div class="form-group">
+              <label for="">Tare Weight</label>
+              <input [(ngModel)]="TareWeight" type="text" class="form-control">
+            </div>
+          </div>
+          </div>
+       </td>
+     <td>
+      <input type="checkbox" [(ngModel)]="checkbox">
+     </td>
+     </tr>
+    
+     <!-- <tr>
+       <td>
+        <div class="col-md-12">
+          <div class="form">
+            <div class="form-group">
+              <label for="">Type</label> -->
+              <!-- <input [(ngModel)]="Type" type="text" class="form-control" > -->
+                <!-- <mat-select class="form-control">
+                  <mat-option *ngFor="let Type of types" [value]="Type.value" class="form-control">
+                    {{Type.viewValue}}
+                  </mat-option>
+                </mat-select>
+            </div>
+          </div>
+          </div>
+       </td>
+       <td>
+        <input type="checkbox" [(ngModel)]="checkbox">
+       </td>
+     </tr> -->
+     <tr>
+      <td>
+       <div class="col-md-12">
+         <div class="form">
+           <div class="form-group">
+             <label for="">Total Pack</label>
+             <input [(ngModel)]="TotalPack" type="text" class="form-control">
+           </div>
+         </div>
+         </div>
+      </td>
+      <td>
+       <input type="checkbox" [(ngModel)]="checkbox">
+      </td>
+    </tr>
+    <tr>
+      <td>
+       <div class="col-md-12">
+         <div class="form">
+           <div class="form-group">
+             <label for="">Pack In Each Quantity</label>
+             <input [(ngModel)]="Quantity" type="text" class="form-control">
+           </div>
+         </div>
+         </div>
+      </td>
+      <td>
+       <input type="checkbox" [(ngModel)]="checkbox">
+      </td>
+    </tr>
+    
+     <tr>
+      <button (click)="onPrint()" class="btn" style="margin-left: 2%">Print</button>
+      <button (click)="onClear()" class="btn" style="margin-left: 5%">Clear</button>
+    </tr>
+  </table>
+  
+</div>
+</mat-card>
+
+      <!-- <tr>
+        <td style="width: 40%;  padding-left: 20%;">
+          <div>
+            <mat-form-field>
+              <input [(ngModel)]="ProductCode" matInput placeholder="Product Code" name="ProductCode">
+            </mat-form-field>
+          </div>
+        </td>
+        <td style="padding-right: 50%; padding-left: 20%;">
+          <div>
+            <mat-form-field>
+              <input [(ngModel)]="ProductName" matInput placeholder="Product Name" name="ProductName">
+            </mat-form-field>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 40%;  padding-left: 20%;">
+          <div>
+            <mat-form-field>
+              <input [(ngModel)]="TareWeight" matInput placeholder="Tare Weight" name="TareWeight">
+            </mat-form-field>
+          </div>
+        </td>
+        <td style="padding-right: 50%; padding-left: 20%;">
+          <div>
+            <mat-form-field>
+              <input [(ngModel)]="NetWeight" matInput placeholder="Net Weight" name="NetWeight">
+            </mat-form-field>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 40%;  padding-left: 20%;">
+          <div>
+            <mat-form-field>
+              <input [(ngModel)]="GrossWeight" matInput placeholder="Gross Weight" name="GrossWeight">
+            </mat-form-field>
+          </div>
+        </td>
+        <td style="padding-right: 50%; padding-left: 20%;">
+          <div>
+            <mat-form-field>
+              <input [(ngModel)]="TotalPack" matInput placeholder="Total Pack" name="TotalPack">
+            </mat-form-field>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 40%;  padding-left: 20%;">
+          <div>
+            <mat-form-field>
+              <input [(ngModel)]="Type" matInput placeholder="Type" name="Type">
+              <mat-select>
+                <mat-option *ngFor="let Type of types" [value]="Type.value">
+                  {{Type.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </td>
+        <td style="padding-right: 50%; padding-left: 20%;">
+          <div>
+            <mat-form-field>
+              <input [(ngModel)]="MaterialType" matInput placeholder="Material Type" name="MaterialType">
+              <mat-select>
+                <mat-option *ngFor="let Material of materials" [value]="Material.value">
+                  {{Material.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </td>
+      </tr> -->
+      
+   
+    
+   
+    <!-- <div>
+      <mat-form-field>
+        <input [(ngModel)]="TareWeight" matInput placeholder="TareWeight" name="TareWeight">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input [(ngModel)]="GrossWeight" matInput placeholder="GrossWeight" name="GrossWeight">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input [(ngModel)]="NetWeight" matInput placeholder="NetWeight" name="NetWeight">
+      </mat-form-field>
+    </div>
+     -->
+

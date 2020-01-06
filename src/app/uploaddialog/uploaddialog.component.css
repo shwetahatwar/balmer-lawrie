@@ -1,0 +1,44 @@
+.btn{
+   
+    margin-left: 120%;
+    /* text-align: center; */
+    background-color: navy; 
+    border: none;
+    color: white;
+    /* padding: 10px 32px; */
+    text-align: right;
+    text-decoration: none;
+    /* display: inline-block; */
+    /* height: 20%; */
+    display: inline;
+    font-size: 14px;
+
+   
+  }
+  .btn-btn{
+      margin-top: 1%;
+    margin-left: 5%;
+    text-align: center;
+    background-color: navy; 
+    border: none;
+    color: white;
+    /* padding: 10px 32px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+  }
+  
+
+  /* .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    margin-left: 10%;
+  }
+   */
+  .example-full-width {
+    width: 60%;
+    margin-left: 5%;
+  }

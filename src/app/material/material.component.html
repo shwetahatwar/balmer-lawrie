@@ -1,0 +1,63 @@
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="productCode">
+        <th mat-header-cell *matHeaderCellDef>PRODUCT CODE </th>
+        <td mat-cell *matCellDef="let element"> {{element.productCode}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="productName">
+        <th mat-header-cell *matHeaderCellDef>PRODUCT NAME</th>
+        <td mat-cell *matCellDef="let element"> {{element.productName}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef>Quantity</th>
+        <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="batchCode">
+        <th mat-header-cell *matHeaderCellDef>BATCH CODE</th>
+        <td mat-cell *matCellDef="let element"> {{element.batchCode}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="grossWeight">
+        <th mat-header-cell *matHeaderCellDef>GROSS WEIGHT</th>
+        <td mat-cell *matCellDef="let element"> {{element.grossWeight}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="netWeight">
+        <th mat-header-cell *matHeaderCellDef>NET WEIGHT</th>
+        <td mat-cell *matCellDef="let element"> {{element.netWeight}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tareWeight">
+        <th mat-header-cell *matHeaderCellDef>TARE WEIGHT</th>
+        <td mat-cell *matCellDef="let element"> {{element.tareWeight}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="materialType">
+        <th mat-header-cell *matHeaderCellDef>MATERIAL TYPE</th>
+        <td mat-cell *matCellDef="let element"> {{element.materialType}} </td>
+      </ng-container>
+
+      <!-- <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>ACTION</th>
+        <td mat-cell *matCellDef="let element"> {{element.action}}
+        <button (click)="onAssign()" class="btn" style="margin-left: 2%">Assign</button>
+        </td>
+      </ng-container> -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  
+  

@@ -1,0 +1,55 @@
+<mat-card>
+    <div class="example-container">
+      <h2>Assign Module</h2>
+      <table style="width: 100%;">
+       <tr>
+         <td>
+          <div class="col-md-12">
+            <div class="form">
+              <div class="form-group" style="font-size: larger;">
+                <label for="">Dispatch Slip Id:12345</label>
+                <!-- <input [(ngModel)]="DispatchList" type="text" class="form-control"> -->
+              </div>
+            </div>
+            </div>
+         </td>
+       </tr>
+       <tr>
+        <td>
+         <div class="col-md-12">
+           <div class="form">
+             <div class="form-group">
+               <label for="">Picker</label>
+               <!-- <input [(ngModel)]="Type" type="text" class="form-control" > -->
+                 <mat-select class="form-control">
+                   <mat-option *ngFor="let Picker of pickers" [value]="Picker.value" class="form-control">
+                     {{Picker.viewValue}}
+                   </mat-option>
+                 </mat-select>
+             </div>
+           </div>
+           </div>
+        </td>
+      </tr>
+      <tr>
+       <td>
+        <div class="col-md-12">
+          <div class="form">
+            <div class="form-group">
+              <label for="">Loader</label>
+              <!-- <input [(ngModel)]="Type" type="text" class="form-control" > -->
+                <mat-select class="form-control">
+                  <mat-option *ngFor="let Loader of loaders" [value]="Loader.value" class="form-control">
+                    {{Loader.viewValue}}
+                  </mat-option>
+                </mat-select>
+            </div>
+          </div>
+          </div>
+       </td>
+       <tr>
+        <button (click)="onSave()" class="btn" style="margin-left: 2%">Save</button>
+       </tr>
+      </table>
+    </div>
+</mat-card>

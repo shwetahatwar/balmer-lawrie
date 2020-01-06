@@ -1,0 +1,132 @@
+<div *ngIf = "globalval==1">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button>
+        <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      </button>
+      <h1>Balmer Lawrie</h1>
+      
+      <!-- <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/part'">Part </a>
+        <a mat-button [routerLink]="'/site'"> site </a>
+        <a mat-button [routerLink]="'/location'">  Location </a>
+        <a mat-button [routerLink]="'/sublocation'">  Sublocation </a>
+        <a mat-button [routerLink]="'/zone'"> Zone </a>
+        <a mat-button [routerLink]="'/rack'">Rack</a>
+        <a mat-button [routerLink]="'/loading-bay'">Loading Bay </a>
+        <a mat-button [routerLink]="'/fg-genration'">FG Genration </a>
+        <a mat-button [routerLink]="'/putaway'">Putaway </a>
+        <a mat-button [routerLink]="'/picklist'">Picklist </a>
+        <a mat-button [routerLink]="'/picking'">Picking </a>
+        <a mat-button [routerLink]="'/dispatch-list'">Dispatch List </a>
+        <a mat-button [routerLink]="'/dispatch'">Dispatch </a>
+        <a mat-button [routerLink]="'/reports'">Reports </a>
+       
+      </div> -->
+    </mat-toolbar-row>
+  
+    <!-- <mat-toolbar-row>
+        <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
+      </mat-toolbar-row> -->
+  </mat-toolbar>
+  <!--side nav bar-->
+
+  <mat-sidenav-container >
+    <mat-sidenav #sidenav>
+      <!-- <mat-nav-list>
+        <a mat-list-item [routerLink]="'/part'">Part </a>
+        <a mat-list-item [routerLink]="'/site'"> site  </a>
+        <a mat-list-item [routerLink]="'/location'">Location</a>
+        <a mat-list-item [routerLink]="'/sublocation'">Sublocation</a>
+        <a mat-list-item [routerLink]="'/zone'"> Zone </a>
+        <a mat-list-item [routerLink]="'/rack'">Rack</a>
+        <a mat-list-item [routerLink]="'/loading-bay'">Loading Bay</a>
+        <a mat-list-item [routerLink]="'/fg-genration'">FG Genration</a>
+        <a mat-list-item [routerLink]="'/putaway'">Putaway </a>
+        <a mat-list-item [routerLink]="'/picklist'">Picklist</a>
+        <a mat-list-item [routerLink]="'/picking'">Picking</a>
+        <a mat-list-item [routerLink]="'/dispatch-list'">Dispatch List </a>
+        <a mat-list-item [routerLink]="'/dispatch'">Dispatch</a>
+        <a mat-list-item [routerLink]="'/reports'">Reports </a>
+        <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
+      </mat-nav-list> -->
+
+      <mat-nav-list>
+        <a mat-list-item ><mat-icon matListIcon>dashboard</mat-icon>Dashboard</a>
+        <a mat-list-item [matMenuTriggerFor]="asset"><mat-icon matListIcon>view_list</mat-icon>Assest</a>
+        <a mat-list-item [matMenuTriggerFor]="print"><mat-icon matListIcon>print</mat-icon>Reprint</a>
+        <a mat-list-item [matMenuTriggerFor]="reports"><mat-icon matListIcon>bar_chart</mat-icon>Reports</a>
+        <mat-menu #asset="matMenu">
+
+          <button  mat-menu-item routerLink="/Move" (click)="drawer.toggle()" >Move</button>
+  
+          <button mat-menu-item routerLink="/Allocate" (click)="drawer.toggle()" >Allocate</button>
+        </mat-menu>
+        
+        <a mat-list-item [matMenuTriggerFor]="transact"><mat-icon matListIcon>view_module</mat-icon>Masters</a>
+
+     
+      <mat-menu #transact="matMenu">
+
+        <button  mat-menu-item routerLink="/site" (click)="drawer.toggle()" >Site</button>
+
+        <button mat-menu-item routerLink="/location" (click)="drawer.toggle()" >Location</button>
+
+        <button mat-menu-item routerLink="/sublocation"  (click)="drawer.toggle()" >Sublocation</button>
+
+      </mat-menu>
+
+      <mat-menu #print="matMenu">
+
+        <button  mat-menu-item routerLink="/asset" (click)="drawer.toggle()" >Assest</button>
+
+        <button mat-menu-item routerLink="/location" (click)="drawer.toggle()" >Location</button>
+
+        <button mat-menu-item routerLink="/employee"  (click)="drawer.toggle()" >Employee</button>
+
+      </mat-menu>
+      <mat-menu #reports="matMenu">
+
+        <button  mat-menu-item routerLink="/asset" (click)="drawer.toggle()" >Assest Dispose Report</button>
+
+        <button mat-menu-item routerLink="/location" (click)="drawer.toggle()" >Assest Transfer Report</button>
+
+        <button mat-menu-item routerLink="/employee"  (click)="drawer.toggle()" >Assets Description Report</button>
+
+      </mat-menu>
+      
+      <a mat-list-item ><mat-icon matListIcon>assessment</mat-icon>FG Genration</a>
+      <a mat-list-item ><mat-icon matListIcon>loyalty</mat-icon>Putaway</a>
+      <a mat-list-item ><mat-icon matListIcon>list</mat-icon>Picklist</a>
+      <a mat-list-item ><mat-icon matListIcon>motorcycle</mat-icon>Picking</a>
+      <a mat-list-item ><mat-icon matListIcon>list</mat-icon>Dispatch List</a>
+      <a mat-list-item ><mat-icon matListIcon>all_out</mat-icon>Dispatch</a>
+      <a mat-list-item ><mat-icon matListIcon>help</mat-icon>Help</a>
+     
+        </mat-nav-list>
+     
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 78vh;">
+        <router-outlet></router-outlet>
+        <!-- <app-login></app-login> -->
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <mat-toolbar style="margin-bottom: 1%; " class="bottom-toolbar">
+    
+      <img src="..\assets\bRIOT1.png" style="width: 100px; height: 50px; margin-left:88%; margin-top: 0%;">
+  
+    <!-- <span>powered By BRiOT</span> -->
+  </mat-toolbar>
+</div>
+
+<!-- <div class="navbar">
+  <h1>Powered By BRiOT</h1>
+</div> -->
+<!-- <router-outlet></router-outlet> -->
+
+<div *ngIf = "globalval==0">
+ <app-login></app-login>
+</div>

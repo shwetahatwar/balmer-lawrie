@@ -1,0 +1,62 @@
+<mat-card>
+    <div class="example-container">
+      <h2>Reprint</h2>
+      <table style="width: 100%;">
+       <tr>
+         <td>
+          <div class="col-md-12">
+            <div class="form">
+              <div class="form-group">
+                <label for="">Product Code</label>
+             <!-- <input [(ngModel)]="Type" type="text" class="form-control" > -->
+               <mat-select class="form-control">
+                 <mat-option *ngFor="let Product of products" [value]="Product.value" class="form-control">
+                   {{Product.viewValue}}
+                 </mat-option>
+               </mat-select>
+              </div>
+            </div>
+            </div>
+         </td>
+       </tr>
+       <tr>
+        <td>
+         <div class="col-md-12">
+           <div class="form">
+             <div class="form-group">
+                <label for="">Batch Code</label>
+                <!-- <input [(ngModel)]="Type" type="text" class="form-control" > -->
+                  <mat-select class="form-control">
+                    <mat-option *ngFor="let Batch of batchs" [value]="Batch.value" class="form-control">
+                      {{Batch.viewValue}}
+                    </mat-option>
+                  </mat-select>
+             </div>
+           </div>
+           </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+         <div class="col-md-12">
+           <div class="form">
+             <div class="form-group">
+                <label for="">Material Type</label>
+                <!-- <input [(ngModel)]="Type" type="text" class="form-control" > -->
+                  <mat-select class="form-control">
+                    <mat-option *ngFor="let Material of materials" [value]="Material.value" class="form-control">
+                      {{Material.viewValue}}
+                    </mat-option>
+                  </mat-select>
+             </div>
+           </div>
+           </div>
+        </td>
+      </tr>
+      <tr>
+        <button (click)="onReprint()" class="btn">Reprint</button>
+      </tr>
+      </table>
+    </div>
+    <app-reprinttable></app-reprinttable>
+</mat-card>

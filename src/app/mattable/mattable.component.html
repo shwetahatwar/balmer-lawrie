@@ -1,0 +1,53 @@
+
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource">
+  
+      <!-- Position Column -->
+      <ng-container matColumnDef="dispatchslipid">
+        <th mat-header-cell *matHeaderCellDef> DISPATCH ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.dispatchslipid}} </td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="picker">
+        <th mat-header-cell *matHeaderCellDef> PICKER </th>
+        <td mat-cell *matCellDef="let element"> {{element.picker}} </td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="loader">
+        <th mat-header-cell *matHeaderCellDef>LOADER</th>
+        <td mat-cell *matCellDef="let element"> {{element.loader}} </td>
+      </ng-container>
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="truckno">
+        <th mat-header-cell *matHeaderCellDef>TRUCK NO</th>
+        <td mat-cell *matCellDef="let element"> {{element.truckno}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="capacity">
+        <th mat-header-cell *matHeaderCellDef>CAPACITY</th>
+        <td mat-cell *matCellDef="let element"> {{element.capacity}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="depo">
+        <th mat-header-cell *matHeaderCellDef>DEPO</th>
+        <td mat-cell *matCellDef="let element"> {{element.depo}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>ACTION</th>
+        <td mat-cell *matCellDef="let element"> {{element.action}}
+        <button (click)="onAssign()" class="btn" style="margin-left: 2%">Assign</button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
+  
+  

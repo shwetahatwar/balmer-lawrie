@@ -1,0 +1,35 @@
+<!-- <mat-form-field class="example-full-width">
+    <input matInput placeholder="Favorite food" value="Sushi">
+  </mat-form-field>
+<div>
+    <button (click)="onSearch()" class="btn btn pull-right" style="background-color:navy; float: right;">Search File</button>
+  </div> -->
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="File Location" value="C:\users\program\om\file">
+      <button (click)="onSearch()" class="btn" style="background-color:navy;">Select File</button>
+    </mat-form-field>
+
+    <!-- <mat-form-field style="width: 60%;margin-left: 5%;height: 5%;display: flexbox;">
+      <input matInput placeholder="C:\users\program\om\file" />
+      <button (click)="onSearch()" class="btn" style="background-color:navy;">Select File</button>
+    </mat-form-field>
+     -->
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Truck No" value="">
+        <mat-select>
+          <mat-option *ngFor="let Truck of trucks" [value]="Truck.value" class="form-control">
+            {{Truck.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Depo No" value="">
+      </mat-form-field>
+      <app-material></app-material>
+      <!-- <app-mattable></app-mattable> -->
+      <button (click)="onSave()" class="btn-btn" style="background-color:navy;">Save</button>
+      <button (click)="onDiscard()" class="btn-btn" style="background-color:navy;">Discard</button>
+
+  </form>
